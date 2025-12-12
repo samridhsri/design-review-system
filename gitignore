@@ -1,0 +1,198 @@
+# Digital Design Review System - .gitignore
+
+# ==================== Python ====================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ==================== Node.js ====================
+
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Production builds
+/frontend/dist
+/frontend/build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ==================== Environment ====================
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# ==================== IDEs ====================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ==================== OS ====================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# ==================== Temporary Files ====================
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+# ==================== Build artifacts ====================
+
+# Frontend build
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# ==================== Database (for future) ====================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.pgsql
+
+# ==================== Uploads (for future) ====================
+
+# Uploaded files
+uploads/
+files/
+media/
+
+# ==================== Secrets ====================
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cert
+
+# API keys and secrets
+secrets.json
+credentials.json
+
+# ==================== Documentation ====================
+
+# Generated docs (keep source docs)
+docs/_build/
+site/
+
+# ==================== Testing ====================
+
+# Test output
+test-results/
+coverage/
+.nyc_output/
+
+# ==================== Misc ====================
+
+# Compiled CSS (if not using Tailwind)
+*.css.map
+
+# System files
+*.pid
+*.seed
+*.pid.lock
+
+# Backup files
+*.backup
+*~
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
