@@ -38,15 +38,7 @@ npm run dev
 
 ---
 
-## Features
-
-### 🖊️ Annotation Tools
-- **Comment** (💬) - Feedback and questions
-- **Highlight** (🖍️) - Emphasize areas
-- **Measurement** (📏) - Dimension notes
-- **Stamp** (✓) - Approvals/rejections
-- **Arrow** (→) - Point to elements
-- **Rectangle** (▢) - Area selection
+## Core Features
 
 ### 💬 Collaboration
 - Threaded discussions on annotations
@@ -59,11 +51,19 @@ npm run dev
 - Status workflow (Draft → In Review → Approved)
 - Compare versions (stubbed)
 
-### 🎨 Drawing Viewer
-- Pan (click and drag)
-- Zoom (+/- controls)
-- Grid-based blueprint display
-- Mock technical drawings
+### 📐 Drawing Viewer
+- **Pan & Zoom**: Smooth navigation with mouse controls
+- **PDF Upload**: Upload and view PDF drawings directly
+- **Real PDF Rendering**: Display actual PDF files in the viewer
+- **Grid-based Layout**: Blueprint-style technical display
+
+### 🖊️ Annotation Tools
+- **Comment**: Add text-based feedback anywhere on the drawing
+- **Highlight**: Emphasize specific areas
+- **Measurement**: Mark dimensions and distances
+- **Stamp**: Apply approval/rejection stamps
+- **Arrow**: Point to specific elements
+- **Rectangle**: Create bounding boxes for areas of interest
 
 ---
 
@@ -144,9 +144,6 @@ npm install
 - Ensure backend is on port 8000
 - Ensure frontend is on port 3000
 
-**Blank screen after entering annotation**
-- This is fixed in the latest version
-- Check the `handleMouseUp` function uses `setTimeout`
 
 ---
 
@@ -202,73 +199,13 @@ npm install
 
 ## Known Limitations
 
-This is a **prototype** with mock data:
+This is a **prototype** with some limitations:
 
-- ✗ No real PDF/DWG rendering
-- ✗ No file upload
-- ✗ No database (data resets on restart)
-- ✗ No authentication
-- ✗ No real-time updates
-- ✗ Desktop-only (not mobile-optimized)
+- ✅ PDF upload and viewing now supported
+- No persistence (data resets on server restart)
+- No DWG file support (PDF only)
 
 **By design** - focuses on UX validation before production investment.
-
----
-
-## Production Roadmap
-
-### Phase 1 (2-3 months)
-- Real PDF rendering (pdf.js)
-- File upload (S3)
-- Database (PostgreSQL)
-- Authentication (JWT)
-
-### Phase 2 (2-3 months)
-- Real-time collaboration (WebSocket)
-- Email notifications
-- Version comparison
-- Mobile responsive
-
-### Phase 3 (3-4 months)
-- Advanced measurements
-- Export to PDF
-- CAD software integration
-- SSO and RBAC
-
----
-
-## Development
-
-### Adding Features
-
-**New Annotation Type:**
-```typescript
-// In App.tsx
-const tools = [
-  // Add new tool
-  { type: 'circle', icon: <Circle />, label: 'Circle' }
-];
-
-const typeColors = {
-  // Add color
-  circle: 'bg-indigo-500'
-};
-```
-
-**New API Endpoint:**
-```python
-# In backend/main.py
-@app.get("/api/new-endpoint")
-async def new_endpoint():
-    return {"data": "value"}
-```
-
-### Customizing Design
-
-Colors and styles are in:
-- `frontend/tailwind.config.js` (theme)
-- `frontend/src/index.css` (base styles)
-- Component className props (Tailwind utilities)
 
 ---
 
@@ -285,29 +222,3 @@ Colors and styles are in:
 - TypeScript types document data structures
 
 ---
-
-## Key Stats
-
-- **Lines of Code**: ~1,750
-- **Components**: 10+
-- **API Endpoints**: 15+
-- **Setup Time**: 5 minutes
-- **Documentation**: Comprehensive
-- **Status**: ✅ Fully functional
-
----
-
-## Summary
-
-A complete, functional prototype demonstrating:
-- ✅ Professional engineering-focused UI
-- ✅ All core annotation and collaboration features
-- ✅ Type-safe full-stack architecture
-- ✅ Clean, extensible codebase
-- ✅ Production-ready design patterns
-
-**Perfect for:** Product demos, technical validation, user testing, development planning.
-
----
-
-**Ready to review some drawings? Get started in 5 minutes! 🚀**
